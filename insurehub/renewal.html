@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Renewal tracker · InsureHub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="page-bg"></div>
+    <header class="nav">
+      <a class="logo" href="index.html"><span class="logo-mark">IH</span> InsureHub</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a data-page href="index.html">Home</a></li>
+        <li><a data-page href="browse.html">Browse policy</a></li>
+        <li><a data-page href="renewal.html">Renewal tracker</a></li>
+        <li><a data-page href="support.html">Support</a></li>
+        <li data-auth-slot></li>
+      </ul>
+    </header>
+
+    <section class="page-hero wrap">
+      <span class="eyebrow">Never miss a date</span>
+      <h1>Renewal tracker</h1>
+      <p class="lead" style="color: var(--muted); max-width: 640px">
+        Enter the policy and the monthly renewal date. We calculate how many days remain until the next cycle.
+      </p>
+    </section>
+
+    <section>
+      <div class="wrap" style="max-width: 760px">
+        <form class="form-card form-grid glass-shine" id="renewalForm" novalidate>
+          <div class="field">
+            <label for="policyName">Policy name</label>
+            <input id="policyName" required placeholder="e.g. Care Supreme Plus" />
+          </div>
+          <div class="field">
+            <label for="policyType">Policy type</label>
+            <input id="policyType" required placeholder="Health, Bike, Travel…" />
+          </div>
+          <div class="field">
+            <label for="policyNumber">Policy number</label>
+            <input id="policyNumber" required placeholder="e.g. POL-20419" />
+          </div>
+          <div class="field full">
+            <label for="renewalDate">Renewal date (repeats each month)</label>
+            <input id="renewalDate" type="hidden" required />
+            <div class="calendar glass glass-shine" id="renewalCalendar"></div>
+          </div>
+          <div class="field full">
+            <button class="btn btn-primary" type="submit">Calculate days remaining</button>
+          </div>
+        </form>
+        <div id="renewalNote" class="notice"></div>
+        <div id="daysResult" class="days-card"></div>
+      </div>
+    </section>
+
+    <footer class="footer"><span>© 2026 InsureHub</span></footer>
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/calendar.js"></script>
+    <script src="js/renewal.js"></script>
+  </body>
+</html>

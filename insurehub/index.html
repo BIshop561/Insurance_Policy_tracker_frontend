@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>InsureHub · Compare & Renewal Tracker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="page-bg"></div>
+    <header class="nav">
+      <a class="logo" href="index.html"><span class="logo-mark">IH</span> InsureHub</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a data-page href="index.html">Home</a></li>
+        <li><a data-page href="browse.html">Browse policy</a></li>
+        <li><a data-page href="renewal.html">Renewal tracker</a></li>
+        <li><a data-page href="support.html">Support</a></li>
+        <li data-auth-slot></li>
+      </ul>
+    </header>
+
+    <section class="hero">
+      <div class="hero-media" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <span class="eyebrow">Insurance compare · Renewal tracker</span>
+        <h1>Find the right cover. Never miss a renewal.</h1>
+        <p class="lead">
+          InsureHub is a single place to browse health, mediclaim, bike, and travel policies,
+          compare up to three plans side by side, and track how many days remain until your next
+          monthly renewal. Search, filter, set reminders, and manage your profile — all in one
+          modern dashboard experience.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="browse.html">Browse policies</a>
+          <a class="btn btn-ghost" href="renewal.html">Set a reminder</a>
+          <a class="btn btn-gold" href="compare.html">Compare plans</a>
+        </div>
+        <div class="stats">
+          <div class="stat"><b>12+</b><span>Curated policies</span></div>
+          <div class="stat"><b>2–3</b><span>Plans per comparison</span></div>
+          <div class="stat"><b>24×7</b><span>Support desk</span></div>
+        </div>
+      </div>
+      <a class="scroll-down" href="#trending" aria-label="Scroll down">
+        <span>Scroll</span>
+        <span class="scroll-chevron"></span>
+      </a>
+    </section>
+
+    <section id="trending">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2>Trending policies</h2>
+            <p>Scroll through live picks. Hover to pause, then open a full description.</p>
+          </div>
+          <a class="btn btn-ghost" href="browse.html">View all</a>
+        </div>
+      </div>
+      <div class="marquee-wrap">
+        <div class="marquee" id="marqueeTrack"></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap grid">
+        <article class="glass glass-float glass-shine" style="padding: 24px">
+          <h3>Compare with clarity</h3>
+          <p class="meta">Select 2 or 3 policies and match premium, cover, waiting period, network, add-ons, and exclusions.</p>
+        </article>
+        <article class="glass glass-gold glass-float glass-shine" style="padding: 24px; animation-delay: .4s">
+          <h3>Monthly renewal countdown</h3>
+          <p class="meta">Save policy name, type, number, and date. We show days remaining until the next monthly cycle.</p>
+        </article>
+        <article class="glass glass-teal glass-float glass-shine" style="padding: 24px; animation-delay: .8s">
+          <h3>Secure account</h3>
+          <p class="meta">Register with PAN and contact details, then sign in for profile, reminders, and password change.</p>
+        </article>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span>© 2026 InsureHub</span>
+      <a href="support.html">Need help?</a>
+    </footer>
+
+    <aside class="compare-tray glass" id="compareTray">
+      <p id="compareTrayText"></p>
+      <div>
+        <button class="btn btn-ghost btn-sm" id="clearCompare">Clear</button>
+        <button class="btn btn-primary btn-sm" id="goCompare">Compare now</button>
+      </div>
+    </aside>
+
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

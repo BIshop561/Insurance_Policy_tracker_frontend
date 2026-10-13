@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Policy details · InsureHub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="page-bg"></div>
+    <header class="nav">
+      <a class="logo" href="index.html"><span class="logo-mark">IH</span> InsureHub</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a data-page href="index.html">Home</a></li>
+        <li><a data-page href="browse.html">Browse policy</a></li>
+        <li><a data-page href="renewal.html">Renewal tracker</a></li>
+        <li><a data-page href="support.html">Support</a></li>
+        <li data-auth-slot></li>
+      </ul>
+    </header>
+
+    <section>
+      <div class="wrap form-card" id="policyDetail"></div>
+    </section>
+
+    <footer class="footer"><span>© 2026 InsureHub</span></footer>
+    <aside class="compare-tray glass" id="compareTray">
+      <p id="compareTrayText"></p>
+      <div>
+        <button class="btn btn-ghost btn-sm" id="clearCompare">Clear</button>
+        <button class="btn btn-primary btn-sm" id="goCompare">Compare now</button>
+      </div>
+    </aside>
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/policy.js"></script>
+  </body>
+</html>

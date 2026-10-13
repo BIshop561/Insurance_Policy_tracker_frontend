@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Browse policies · InsureHub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="page-bg"></div>
+    <header class="nav">
+      <a class="logo" href="index.html"><span class="logo-mark">IH</span> InsureHub</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a data-page href="index.html">Home</a></li>
+        <li><a data-page href="browse.html">Browse policy</a></li>
+        <li><a data-page href="renewal.html">Renewal tracker</a></li>
+        <li><a data-page href="support.html">Support</a></li>
+        <li data-auth-slot></li>
+      </ul>
+    </header>
+
+    <section class="page-hero wrap">
+      <span class="eyebrow">Catalogue</span>
+      <h1>Browse policies</h1>
+      <p class="lead" style="color: var(--muted); max-width: 640px">
+        Search by name or insurer, filter by type, then compare two or three plans or set a renewal reminder.
+      </p>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="toolbar">
+          <input class="search" id="searchInput" type="search" placeholder="Search policy, company, or type…" />
+          <select class="filter" id="typeFilter">
+            <option value="all">All types</option>
+          </select>
+          <select class="filter" id="companyFilter">
+            <option value="all">All companies</option>
+          </select>
+          <select class="filter" id="sortFilter">
+            <option value="featured">Featured</option>
+            <option value="premium-asc">Premium: low to high</option>
+            <option value="premium-desc">Premium: high to low</option>
+            <option value="rating">Top rated</option>
+          </select>
+        </div>
+        <div class="grid" id="policyGrid"></div>
+        <p class="notice err" id="emptyState">No policies match those filters.</p>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span>© 2026 InsureHub</span>
+      <a href="compare.html">Open compare</a>
+    </footer>
+
+    <aside class="compare-tray glass" id="compareTray">
+      <p id="compareTrayText"></p>
+      <div>
+        <button class="btn btn-ghost btn-sm" id="clearCompare">Clear</button>
+        <button class="btn btn-primary btn-sm" id="goCompare">Compare now</button>
+      </div>
+    </aside>
+
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/browse.js"></script>
+  </body>
+</html>

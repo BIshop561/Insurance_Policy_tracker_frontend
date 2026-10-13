@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register · InsureHub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="page-bg"></div>
+    <header class="nav">
+      <a class="logo" href="index.html"><span class="logo-mark">IH</span> InsureHub</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a data-page href="index.html">Home</a></li>
+        <li><a data-page href="browse.html">Browse policy</a></li>
+        <li><a data-page href="renewal.html">Renewal tracker</a></li>
+        <li><a data-page href="support.html">Support</a></li>
+        <li data-auth-slot></li>
+      </ul>
+    </header>
+
+    <div class="auth-split">
+      <div class="auth-art">
+        <h2>Create your InsureHub ID</h2>
+        <p class="lead">We store details locally in this browser for the demo. You will see a success message after register.</p>
+      </div>
+      <div style="padding: 40px 6vw">
+        <form class="form-card form-grid" id="registerForm" novalidate>
+          <h1 class="full">Registration</h1>
+          <div class="field">
+            <label for="name">Full name</label>
+            <input id="name" name="name" required minlength="2" maxlength="60" pattern="[A-Za-z]+([ ][A-Za-z]+)*" placeholder="Letters and spaces only" autocomplete="name" />
+            <span class="field-error">Invalid data</span>
+          </div>
+          <div class="field">
+            <label for="phone">Mobile no.</label>
+            <input id="phone" name="phone" required inputmode="numeric" minlength="10" maxlength="10" pattern="[6-9][0-9]{9}" placeholder="10-digit mobile" autocomplete="tel" />
+            <span class="field-error">Invalid data</span>
+          </div>
+          <div class="field full">
+            <label for="dob">Date of birth</label>
+            <input id="dob" name="dob" type="hidden" required />
+            <div class="calendar glass glass-shine" id="dobCalendar"></div>
+            <span class="field-error">Invalid data</span>
+          </div>
+          <div class="field">
+            <label for="pan">PAN no.</label>
+            <input id="pan" name="pan" required minlength="10" maxlength="10" pattern="[A-Za-z]{5}[0-9]{4}[A-Za-z]" placeholder="ABCDE1234F" style="text-transform: uppercase" />
+            <span class="field-error">Invalid data</span>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required maxlength="80" pattern="[^\s@]+@[^\s@]+\.[^\s@]+" placeholder="you@email.com" autocomplete="email" />
+            <span class="field-error">Invalid data</span>
+          </div>
+          <div class="field">
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password" required minlength="6" autocomplete="new-password" />
+            <span class="field-error">Invalid data</span>
+          </div>
+          <div class="field full">
+            <button class="btn btn-primary" type="submit">Register</button>
+          </div>
+          <p class="meta full">Already registered? <a href="signin.html">Sign in</a></p>
+          <div id="authNote" class="notice full"></div>
+        </form>
+      </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/calendar.js"></script>
+    <script src="js/auth.js"></script>
+  </body>
+</html>
